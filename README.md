@@ -8,10 +8,25 @@
 $ npm install
 ```
 
+### Initialize docker container
+
+This step will initialize container and run NodeJS with command<br>
+``npm run start:dev``
+
+```bash
+$ docker-compose up
+```
+
+### Access API
+
+```http
+http://localhost:3000/api
+```
+
 ### Task list
-- [x] Change global prefix
-- [x] Docker integration
-- [x] Environment variables do connect database
+- ✔️ Change global prefix
+- ✔️ Docker integration
+- ✔️ Environment variables do connect database
 - [ ] Typeorm
 - [ ] Config class to connect database
 - [ ] Entities and migrations
