@@ -10,11 +10,11 @@ $ npm install
 
 ### Task list
 - [x] Change global prefix
-- [ ] Docker integration
+- [x] Docker integration
 - [ ] Environment variables do connect database
+- [ ] Typeorm
 - [ ] Config class to connect database
 - [ ] Entities and migrations
-- [ ] 
 
 ### License
 [MIT licensed](LICENSE).
