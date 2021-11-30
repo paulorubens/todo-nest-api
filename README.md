@@ -19,7 +19,7 @@ $ docker-compose up
 
 ### Access API
 
-```http
+```
 http://localhost:3000/api
 ```
 
