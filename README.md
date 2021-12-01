@@ -24,12 +24,13 @@ http://localhost:3000/api
 ```
 
 ### Task list
-- ✔️ Change global prefix
-- ✔️ Docker integration
-- ✔️ Environment variables do connect database
-- [ ] Typeorm
-- [ ] Config class to connect database
-- [ ] Entities and migrations
+- [x] Change global prefix
+- [x] Docker integration
+- [x] Environment variables do connect database
+- [x] Typeorm
+- [x] Entities and migrations
+- [ ] JWT
+- [ ] User control access
 
 ### License
 [MIT licensed](LICENSE).

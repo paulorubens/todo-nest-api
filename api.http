@@ -1,0 +1,28 @@
+### API
+GET http://localhost:3000/api
+
+### TASKS
+GET http://localhost:3000/api/tasks
+
+### TASKS
+GET http://localhost:3000/api/tasks/8f6861ff-2c59-4fa0-bc33-40974ff2f49b
+
+###
+POST http://localhost:3000/api/tasks
+Content-Type: application/json
+
+{
+  "description": "task 6"
+}
+
+###
+PATCH http://localhost:3000/api/tasks/8f6861ff-2c59-4fa0-bc33-40974ff2f49b
+Content-Type: application/json
+
+{
+  "description": "task 7",
+  "completed": true
+}
+
+###
+DELETE http://localhost:3000/api/tasks/41664d1d-526f-4f31-92d1-09580d2a0f9b
