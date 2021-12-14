@@ -12,6 +12,12 @@ export class Task {
   @Column()
   completed: boolean;
 
+  @Column()
+  dateCreated: Date;
+
+  @Column()
+  dateCompleted: Date;
+
   @BeforeInsert()
   generateId() {
     this.completed = false;
