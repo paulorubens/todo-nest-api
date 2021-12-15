@@ -20,7 +20,7 @@ export class TasksService {
   findAll() {
     return this.taskRepo.find({
       order: {
-        dateCreated: 'ASC',
+        dateCreated: 'DESC',
         id: 'DESC'
       }
     });
