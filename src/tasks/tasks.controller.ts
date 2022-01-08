@@ -18,8 +18,6 @@ import { FindAllTaskSwagger } from './swagger/findall-task.swagger';
 import { CreateTaskSwagger } from './swagger/create-task.swagger';
 import { FindTaskSwagger } from './swagger/find-task.swagger';
 import { UpdateTaskSwagger } from './swagger/update-task.swagger';
-import { BadRequestSwagger } from 'src/helpers/swagger/bad-request.swagger';
-import { NotFoundSwagger } from 'src/helpers/swagger/not-found.swagger';
 
 @Controller('tasks')
 @ApiTags('Tasks')
@@ -36,7 +34,6 @@ export class TasksController {
   @ApiResponse({
     status: HttpStatus.BAD_REQUEST,
     description: 'Parâmetros inválidos',
-    type: BadRequestSwagger,
   })
   create(@Body() createTaskDto: CreateTaskDto) {
     return this.tasksService.create(createTaskDto);
@@ -64,7 +61,6 @@ export class TasksController {
   @ApiResponse({
     status: HttpStatus.NOT_FOUND,
     description: 'Tarefa não encontrada',
-    type: NotFoundSwagger,
   })
   findOneOrFail(@Param('id', new ParseUUIDPipe()) id: string) {
     return this.tasksService.findOneOrFail(id);
@@ -80,12 +76,10 @@ export class TasksController {
   @ApiResponse({
     status: HttpStatus.BAD_REQUEST,
     description: 'Parâmetros inválidos',
-    type: BadRequestSwagger,
   })
   @ApiResponse({
     status: HttpStatus.NOT_FOUND,
     description: 'Tarefa não encontrada',
-    type: NotFoundSwagger,
   })
   update(
     @Param('id', new ParseUUIDPipe()) id: string,
@@ -104,7 +98,6 @@ export class TasksController {
   @ApiResponse({
     status: HttpStatus.NOT_FOUND,
     description: 'Tarefa não encontrada',
-    type: NotFoundSwagger,
   })
   remove(@Param('id', new ParseUUIDPipe()) id: string) {
     this.tasksService.remove(id);
